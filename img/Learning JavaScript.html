@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5500/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning JavaScript</title>
+    <link rel="stylesheet" href="./Learning JavaScript_files/styles.css">
+</head>
+<body cz-shortcut-listen="true">
+    <div class="header">
+        <h1 id="heading">Learning JavaScript</h1>
+        <p>with Brad Traversy</p>
+    </div>
+
+    <div class="container">
+        <h1 id="time">Wed May 19 2021 11:30:42 GMT+0100 (British Summer Time)</h1>
+        <button id="btn" onclick="showDate()">Click me</button>
+    </div>
+
+    <script>
+
+        // loops
+
+        // var numbers =[23, 33, 43, 53,63];
+
+        // for (var i = 0; i <= 10; i++) {
+        //     console.log('for loop ' + i);
+        // }
+        // var i =0;
+        // while ( i <= 10) {
+        //     console.log('while loop ' + i)
+        //     i++;
+        // }
+
+        // numbers.forEach(function(number) {
+        //     console.log(number)
+        // }); 
+
+        // for ( var i = 0; i < numbers.length; i++ ) {
+        //     console.log(numbers[i])
+        // }
+
+        //  Conditionals
+
+        // if (1 == 1) {
+        //     console.log(true);
+        // } else {
+        //     console.log('this is false')
+        // }
+
+        // var fruit = "bannanas";
+
+        // switch(fruit) {
+        //     case "bannanas":
+        //         alert('I hate bannanas');
+        //         break;
+        //     case "apples":
+        //         alert('I love apples');
+        //         break;
+        //     case "oranges":
+        //         alert('Oranges are ok');
+        //         break;
+        //     default:
+        //         alert('I love all other fruit');
+        //         break;
+
+        // }
+
+        // Objects
+
+        // Object Literals
+
+        // var person = {
+        //     firstName: 'Pete',
+        //     lastName: 'Bates',
+        //     age: 34,
+        //     children: ['Amelie', 'Bella', 'Oliver'],
+        //     address: {
+        //         street: 'DoubleDay Drive',
+        //         town: 'Maldon',
+        //         city: 'Chelmsford',
+        //         postcode: 'CM9 4TL'
+        //     },
+        //     fullName: function (){
+        //         return this.firstName + " " +this.lastName;
+        //     }
+        // }
+
+        // console.log(person.address.street);
+        // console.log(person.fullName());
+
+        // person.children.forEach(function(child) {
+        //     console.log(child);
+        // });
+
+        // Object Constructor
+
+        // var apple = new Object();
+        // apple.color = 'red';
+        // apple.shape = 'round';
+        // apple.describe = function() {
+        //     return 'This apple is ' + this.color + ' and ' + this.shape;
+        // }
+
+        // console.log(apple.describe());
+
+        // Constructor Pattern
+
+        // function fruit(name, color, shape) {
+        //     this.name = name;
+        //     this.color = color;
+        //     this.shape = shape;
+        //     this.describe = function() {
+        //         return ' This ' + this.name + ' is ' + this.color + ' and its ' + this.shape;
+        //     }
+        // }
+
+        // var apple = new fruit('apple', 'red', 'round');
+        // var melon = new fruit('melon', 'green', 'round');
+
+        // console.log(apple);
+        // console.log(melon.describe());
+
+        // var users = [
+        //     {
+        //         name: 'John Doe',
+        //         age: 34
+        //     },
+        //     {
+        //         name:'Mark Smith',
+        //         age: 56
+        //     },
+        //     {
+        //         name: 'Shelly Williams',
+        //         age: 20
+        //     }
+        // ];
+
+        // console.log(users[0].name);
+
+        // Events
+
+        // function changeText() {
+        //     var heading = document.getElementById('heading')
+        //     heading.innerHTML = 'You clicked';
+        // }
+
+        function showDate() {
+            var time = document.getElementById('time');
+            time.innerHTML = Date();
+        }
+
+    </script>
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body></html>
